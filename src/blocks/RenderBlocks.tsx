@@ -2,9 +2,14 @@
 import React, { Fragment } from 'react'
 
 import type { Page } from '@/payload-types'
+import { HeaderBlock } from './HeaderBlock/config'
+import { HeroBlock } from './HeroBlock/config'
+import { MediaBlock } from './MediaBlock/config'
 
 const blockComponents = {
-  // hero: HeroBlock,
+  hero: HeroBlock,
+  media: MediaBlock,
+  header: HeaderBlock,
 }
 
 export const RenderBlocks: React.FC<{

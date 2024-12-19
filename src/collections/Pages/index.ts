@@ -7,6 +7,8 @@ import { slugField } from '@/fields/slug'
 import { generatePreviewPath } from '@/utilities/generatePreviewPath'
 import { revalidateDelete, revalidatePage } from './hooks/revalidatePage'
 
+import { HeaderBlock } from '@/blocks/HeaderBlock/config'
+import { HeroBlock } from '@/blocks/HeroBlock/config'
 import { MediaBlock } from '@/blocks/MediaBlock/config'
 import {
   MetaDescriptionField,
@@ -66,7 +68,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [MediaBlock],
+              blocks: [MediaBlock, HeaderBlock, HeroBlock],
               required: true,
               admin: {
                 initCollapsed: true,
